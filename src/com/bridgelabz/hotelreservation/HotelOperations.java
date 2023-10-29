@@ -33,9 +33,9 @@ public class HotelOperations {
         String day2 = String.valueOf(localDate2);
         System.out.println(day2);
         System.out.println(day1);
-        int sum1 = hotelArrayList.get(0).rateCalculation(day1, ) + hotelArrayList.get(0).rateCalculation(day2, 12);
-        int sum2 = hotelArrayList.get(1).rateCalculation(day1, 11) + hotelArrayList.get(1).rateCalculation(day2, 12);
-        int sum3 = hotelArrayList.get(2).rateCalculation(day1, 11) + hotelArrayList.get(2).rateCalculation(day2, 12);
+        int sum1 = hotelArrayList.get(0).rateCalculation(day1 ) + hotelArrayList.get(0).rateCalculation(day2);
+        int sum2 = hotelArrayList.get(1).rateCalculation(day1) + hotelArrayList.get(1).rateCalculation(day2);
+        int sum3 = hotelArrayList.get(2).rateCalculation(day1) + hotelArrayList.get(2).rateCalculation(day2);
 
 
         if (sum1 > sum2 && sum1 > sum3) {
