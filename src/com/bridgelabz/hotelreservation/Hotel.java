@@ -1,5 +1,7 @@
 package com.bridgelabz.hotelreservation;
 
+import java.io.IOException;
+
 public class Hotel {
     public int hotelRatings;
     public String hotelName;
@@ -56,12 +58,31 @@ public class Hotel {
                 '}';
     }
 
-    public int rateCalculation(String day) {
-        if (day.equals("MONDAY") || day.equals("TUESDAY") || day.equals("WEDNESAY") || day.equals("THURSDAY") || day.equals("FRIDAY")) {
-            return getHotelWeekdayRegularCosutumer();
-        } else {
-            return getHotelWeekendRegularCosutumer();
+    public int rateCalculation(String day, int x) {
+
+        try {
+
+
+            if (day.equals("MONDAY") || day.equals("TUESDAY") || day.equals("WEDNESAY") || day.equals("THURSDAY") || day.equals("FRIDAY")) {
+                if (x == 1) {
+
+                    return getHotelWeekdayRegularCosutumer();
+
+                } else {
+                    return getHotelWeekdayRewardCostumer();
+                }
+            } else {
+                if (x == 1) {
+                    return getHotelWeekendRegularCosutumer();
+                } else {
+                    return getHotelWeekendRewardCostumer();
+
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
 
+        return 0;
     }
 }

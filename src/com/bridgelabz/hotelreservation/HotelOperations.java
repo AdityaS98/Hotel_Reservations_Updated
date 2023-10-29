@@ -4,9 +4,11 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class HotelOperations {
     static ArrayList<Hotel> hotelArrayList = new ArrayList<>();
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         HotelOperations operations = new HotelOperations();
@@ -14,7 +16,7 @@ public class HotelOperations {
 
         Hotel Lakewood = new Hotel("LakeWood", 110, 90, 3, 80, 80);
         Hotel Bridgewood = new Hotel("Bridgewood", 160, 80, 4, 110, 50);
-        Hotel Ridgewood = new Hotel("Ridgewood", 220, 150, 5, 110, 40);
+        Hotel Ridgewood = new Hotel("Ridgewood", 220, 150, 5, 100, 40);
         hotelArrayList.add(Lakewood);
         hotelArrayList.add(Bridgewood);
         hotelArrayList.add(Ridgewood);
@@ -33,9 +35,11 @@ public class HotelOperations {
         String day2 = String.valueOf(localDate2);
         System.out.println(day2);
         System.out.println(day1);
-        int sum1 = hotelArrayList.get(0).rateCalculation(day1, ) + hotelArrayList.get(0).rateCalculation(day2, 12);
-        int sum2 = hotelArrayList.get(1).rateCalculation(day1, 11) + hotelArrayList.get(1).rateCalculation(day2, 12);
-        int sum3 = hotelArrayList.get(2).rateCalculation(day1, 11) + hotelArrayList.get(2).rateCalculation(day2, 12);
+        System.out.println("Enter 1 for regular costumer and 2 for reward costumer");
+        int option = sc.nextInt();
+        int sum1 = hotelArrayList.get(0).rateCalculation(day1, option) + hotelArrayList.get(0).rateCalculation(day2, option);
+        int sum2 = hotelArrayList.get(1).rateCalculation(day1, option) + hotelArrayList.get(1).rateCalculation(day2, option);
+        int sum3 = hotelArrayList.get(2).rateCalculation(day1, option) + hotelArrayList.get(2).rateCalculation(day2, option);
 
 
         if (sum1 > sum2 && sum1 > sum3) {
