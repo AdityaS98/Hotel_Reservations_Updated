@@ -20,6 +20,7 @@ public class HotelOperations {
         hotelArrayList.add(Ridgewood);
         System.out.println(hotelArrayList);
         operations.findCheapestHotel();
+        operations.cheapestAndBestRatedHotel();
     }
 
     public void findCheapestHotel() {
@@ -37,11 +38,11 @@ public class HotelOperations {
         int sum3 = hotelArrayList.get(2).rateCalculation(day1) + hotelArrayList.get(2).rateCalculation(day2);
 
 
-        if (sum1 < sum2 && sum1 < sum3) {
+        if (sum1 > sum2 && sum1 > sum3) {
             System.out.println("This Rate is for Hotel Lakewood");
             System.out.println("Minimum Rates For The Hotel is :- " + sum1 + "$");
 
-        } else if (sum2 < sum1 && sum2 < sum3) {
+        } else if (sum2 > sum1 && sum2 > sum3) {
             System.out.println("This Rate is for Hotel Bridgewood");
             System.out.println("Minimum Rates For The Hotel is :- " + sum2 + "$");
 
@@ -52,6 +53,19 @@ public class HotelOperations {
         }
     }
 
+    public void cheapestAndBestRatedHotel() {
+        int rating1 = hotelArrayList.get(0).getHotelRatings();
+        int rating2 = hotelArrayList.get(1).getHotelRatings();
+        int rating3 = hotelArrayList.get(2).getHotelRatings();
+        if (rating1 > rating2 && rating1 > rating3) {
+            System.out.println("Best Rated Hotel is " + rating1);
+        } else if (rating2 > rating1 && rating2 > rating3) {
+            System.out.println("Best Rated Hotel is " + rating2);
+        } else {
+            System.out.println("Best Rated Hotel is " + rating3);
 
+
+        }
+    }
 }
 
