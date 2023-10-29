@@ -40,7 +40,7 @@ public class Hotel {
         if (day.equals("MONDAY") || day.equals("TUESDAY") || day.equals("WEDNESAY") || day.equals("THURSDAY") || day.equals("FRIDAY")) {
             return getHotelWeekdayRegularCosutumer();
         } else {
-            return 0;
+            return getHotelWeekendRegularCosutumer();
         }
 
     }
