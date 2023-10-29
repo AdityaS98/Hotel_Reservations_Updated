@@ -6,17 +6,29 @@ public class Hotel {
     public int hotelWeekdayRegularCosutumer;
 
     public int hotelWeekendRegularCosutumer;
+    public int hotelWeekdayRewardCostumer;
+    public int hotelWeekendRewardCostumer;
 
-    public Hotel(String hotelName, int hotelWeekdayRegularCoustumer, int hotelWeekendRegularCosutumer, int hotelRatings) {
+    public Hotel(String hotelName, int hotelWeekdayRegularCoustumer, int hotelWeekendRegularCosutumer, int hotelRatings, int hotelWeekdayRewardCostumer, int hotelWeekendRewardCostumer) {
 
         this.hotelName = hotelName;
         this.hotelWeekdayRegularCosutumer = hotelWeekdayRegularCoustumer;
         this.hotelWeekendRegularCosutumer = hotelWeekendRegularCosutumer;
         this.hotelRatings = hotelRatings;
+        this.hotelWeekdayRewardCostumer = hotelWeekdayRewardCostumer;
+        this.hotelWeekendRewardCostumer = hotelWeekendRewardCostumer;
     }
 
     public int getHotelWeekendRegularCosutumer() {
         return hotelWeekendRegularCosutumer;
+    }
+
+    public int getHotelWeekdayRewardCostumer() {
+        return hotelWeekdayRewardCostumer;
+    }
+
+    public int getHotelWeekendRewardCostumer() {
+        return hotelWeekendRewardCostumer;
     }
 
     public String getHotelName() {
@@ -39,6 +51,8 @@ public class Hotel {
                 ", hotelWeekdayRegularCostumer=" + hotelWeekdayRegularCosutumer +
                 ", hotelWeekendRegularCosutumer=" + hotelWeekendRegularCosutumer +
                 ",hotelRatings=" + hotelRatings +
+                ",hotelWeekdayRewardCostumer=" + hotelWeekdayRewardCostumer +
+                ",hotelWeekendRewardCostumer=" + hotelWeekendRewardCostumer +
                 '}';
     }
 

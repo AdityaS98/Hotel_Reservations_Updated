@@ -12,9 +12,9 @@ public class HotelOperations {
         HotelOperations operations = new HotelOperations();
         System.out.println("Welcome to the hotel reservation system");
 
-        Hotel Lakewood = new Hotel("LakeWood", 110, 90, 3);
-        Hotel Bridgewood = new Hotel("Bridgewood", 160, 80, 4);
-        Hotel Ridgewood = new Hotel("Ridgewood", 220, 150, 5);
+        Hotel Lakewood = new Hotel("LakeWood", 110, 90, 3, 80, 80);
+        Hotel Bridgewood = new Hotel("Bridgewood", 160, 80, 4, 110, 50);
+        Hotel Ridgewood = new Hotel("Ridgewood", 220, 150, 5, 110, 40);
         hotelArrayList.add(Lakewood);
         hotelArrayList.add(Bridgewood);
         hotelArrayList.add(Ridgewood);
@@ -33,9 +33,9 @@ public class HotelOperations {
         String day2 = String.valueOf(localDate2);
         System.out.println(day2);
         System.out.println(day1);
-        int sum1 = hotelArrayList.get(0).rateCalculation(day1) + hotelArrayList.get(0).rateCalculation(day2);
-        int sum2 = hotelArrayList.get(1).rateCalculation(day1) + hotelArrayList.get(1).rateCalculation(day2);
-        int sum3 = hotelArrayList.get(2).rateCalculation(day1) + hotelArrayList.get(2).rateCalculation(day2);
+        int sum1 = hotelArrayList.get(0).rateCalculation(day1, ) + hotelArrayList.get(0).rateCalculation(day2, 12);
+        int sum2 = hotelArrayList.get(1).rateCalculation(day1, 11) + hotelArrayList.get(1).rateCalculation(day2, 12);
+        int sum3 = hotelArrayList.get(2).rateCalculation(day1, 11) + hotelArrayList.get(2).rateCalculation(day2, 12);
 
 
         if (sum1 > sum2 && sum1 > sum3) {
