@@ -12,9 +12,9 @@ public class HotelOperations {
         HotelOperations operations = new HotelOperations();
         System.out.println("Welcome to the hotel reservation system");
 
-        Hotel Lakewood = new Hotel("LakeWood", 110);
-        Hotel Bridgewood = new Hotel("Bridgewood", 160);
-        Hotel Ridgewood = new Hotel("Ridgewood", 220);
+        Hotel Lakewood = new Hotel("LakeWood", 110,90);
+        Hotel Bridgewood = new Hotel("Bridgewood", 160,80);
+        Hotel Ridgewood = new Hotel("Ridgewood", 220,150);
         hotelArrayList.add(Lakewood);
         hotelArrayList.add(Bridgewood);
         hotelArrayList.add(Ridgewood);

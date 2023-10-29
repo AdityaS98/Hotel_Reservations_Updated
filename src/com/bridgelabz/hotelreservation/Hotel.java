@@ -5,12 +5,18 @@ public class Hotel {
     public String hotelName;
     public int hotelWeekdayRegularCosutumer;
 
-    public Hotel(String hotelName, int hotelWeekdayRegularCoustumer) {
+    public int hotelWeekendRegularCosutumer;
+
+    public Hotel(String hotelName, int hotelWeekdayRegularCoustumer, int hotelWeekendRegularCosutumer) {
 
         this.hotelName = hotelName;
         this.hotelWeekdayRegularCosutumer = hotelWeekdayRegularCoustumer;
+        this.hotelWeekendRegularCosutumer = hotelWeekendRegularCosutumer;
     }
 
+    public int getHotelWeekendRegularCosutumer() {
+        return hotelWeekendRegularCosutumer;
+    }
 
     public String getHotelName() {
         return hotelName;
@@ -20,11 +26,13 @@ public class Hotel {
         return hotelWeekdayRegularCosutumer;
     }
 
+
     @Override
     public String toString() {
         return "Hotel{" +
                 "hotelName='" + hotelName + '\'' +
                 ", hotelWeekdayRegularCostumer=" + hotelWeekdayRegularCosutumer +
+                ", hotelWeekendRegularCosutumer=" + hotelWeekendRegularCosutumer +
                 '}';
     }
 
