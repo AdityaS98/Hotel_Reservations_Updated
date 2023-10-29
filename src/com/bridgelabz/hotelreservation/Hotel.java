@@ -1,17 +1,18 @@
 package com.bridgelabz.hotelreservation;
 
 public class Hotel {
-
+    public int hotelRatings;
     public String hotelName;
     public int hotelWeekdayRegularCosutumer;
 
     public int hotelWeekendRegularCosutumer;
 
-    public Hotel(String hotelName, int hotelWeekdayRegularCoustumer, int hotelWeekendRegularCosutumer) {
+    public Hotel(String hotelName, int hotelWeekdayRegularCoustumer, int hotelWeekendRegularCosutumer, int hotelRatings) {
 
         this.hotelName = hotelName;
         this.hotelWeekdayRegularCosutumer = hotelWeekdayRegularCoustumer;
         this.hotelWeekendRegularCosutumer = hotelWeekendRegularCosutumer;
+        this.hotelRatings = hotelRatings;
     }
 
     public int getHotelWeekendRegularCosutumer() {
@@ -20,6 +21,10 @@ public class Hotel {
 
     public String getHotelName() {
         return hotelName;
+    }
+
+    public int getHotelRatings() {
+        return hotelRatings;
     }
 
     public int getHotelWeekdayRegularCosutumer() {
@@ -33,6 +38,7 @@ public class Hotel {
                 "hotelName='" + hotelName + '\'' +
                 ", hotelWeekdayRegularCostumer=" + hotelWeekdayRegularCosutumer +
                 ", hotelWeekendRegularCosutumer=" + hotelWeekendRegularCosutumer +
+                ",hotelRatings=" + hotelRatings +
                 '}';
     }
 
